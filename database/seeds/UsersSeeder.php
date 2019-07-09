@@ -55,7 +55,7 @@ class UsersSeeder extends Seeder
         $chiefs = User::whereIn('position', ['Head of Department'])->get();
 
         foreach ($chiefs as $chief) {
-            factory(App\User::class, 50)->create(['parent_id' => $chief['id']]);
+            factory(App\User::class, 200)->create(['parent_id' => $chief['id']]);
         }
 
     }

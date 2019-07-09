@@ -9,4 +9,9 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 class User extends Authenticatable
 {
 
+    //category has childs
+    public function childs() {
+        return $this->hasMany('App\User','parent_id','id');
+    }
+
 }

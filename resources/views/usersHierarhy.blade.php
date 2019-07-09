@@ -3,7 +3,7 @@
 
 
  <ol class="commentlist group">
-@foreach($users as $k => $comments)
+@foreach($users as $k => $data)
     <!--Выводим только родительские комментарии parent_id = 0-->
 
     @if($k)
@@ -12,7 +12,7 @@
 
     @endif
 
-    @include('users', ['items' => $comments])
+    @include('users', ['items' => $data])
 
     @endforeach
 

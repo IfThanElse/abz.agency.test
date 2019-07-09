@@ -12,4 +12,5 @@
 */
 
 Route::get('/', function () {return view('index');});
-Route::get('/users', 'UsersController@showUserHierarhy');
+Route::get('workers', 'UsersController@showUserHierarhy');
+Route::get('tree-of-workers',array('as'=>'jquery.treeview','uses'=>'TreeController@treeView'));

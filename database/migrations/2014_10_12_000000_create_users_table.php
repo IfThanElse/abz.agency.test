@@ -20,7 +20,9 @@ class CreateUsersTable extends Migration
             $table->string('employment_date');
             $table->integer('salary');
             $table->integer('parent_id');
+            $table->index('parent_id');
             $table->timestamps();
+
         });
     }
 
